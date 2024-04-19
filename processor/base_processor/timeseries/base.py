@@ -8,7 +8,7 @@ from base_processor.timeseries import utils
 from math import ceil
 
 class TimeSeriesChannel(object):
-    def __init__(self, name, rate, index, unit, type, group='default'):
+    def __init__(self, name, rate, index, unit, type, group='default', output_dir = '.'):
         self.id       = None
         # representation
         self.name     = name
@@ -29,7 +29,8 @@ class TimeSeriesChannel(object):
         # there is no filename suffix, and thus, we should match that logic here
         # to pair metadata files w/ data files appropriately.
         file_suffix = '-{index:05d}'.format(index=index) if index > 0 else ''
-        self.data_file = 'channel{}.ts.bin'.format(file_suffix)
+        filename = 'channel{}.ts.bin'.format(file_suffix)
+        self.data_file = os.path.join(output_dir, filename)
 
         assert self.type in ['CONTINUOUS', 'UNIT'], "Type must be CONTINUOUS or UNIT"
 
@@ -51,14 +52,15 @@ class TimeSeriesChannel(object):
         return resp
 
     @classmethod
-    def from_dict(cls, d, index):
+    def from_dict(cls, d, index, output_dir = '.'):
         ch = cls(
             name  = d['name'],
             rate  = d['rate'],
             unit  = d['unit'],
             type  = d['type'].upper(),
             group = d['group'],
-            index = index)
+            index = index,
+            output_dir = output_dir)
 
         ch.id         = d['id']
         ch.start      = d['start']
@@ -142,7 +144,8 @@ class BaseTimeSeriesProcessor(BaseProcessor):
                 rate  = rate,
                 index = index,
                 type  = type.upper(),
-                unit  = unit)
+                unit  = unit,
+                output_dir = self.settings.output_dir)
             self.channels.append(channel)
 
         # return channel object
@@ -166,7 +169,7 @@ class BaseTimeSeriesProcessor(BaseProcessor):
                     and abs(1 - (rate/ch['rate'])) < 0.02):
 
                     self.LOGGER.info('Using existing channel, id={}'.format(ch['id']))
-                    channel = TimeSeriesChannel.from_dict(ch, index)
+                    channel = TimeSeriesChannel.from_dict(ch, index, self.settings.output_dir)
                     self.channels.append(channel)
                     return channel
 

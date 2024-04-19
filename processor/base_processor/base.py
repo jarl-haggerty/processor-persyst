@@ -16,15 +16,12 @@ class BaseProcessor(object):
     required_inputs = []
 
     def __init__(self, inputs=None, cli=False):
-        '''
-        Args:
-            files_key : The input field aligned to "input files", if relevant
-        '''
         self.settings      = Settings()
-        self.LOGGER        = Logging(job_id=self.settings.job_id).logger
+        self.LOGGER        = Logging().logger
+
+        # DEPRECATED
         self.inputs        = {} if inputs is None else inputs
         self._use_cmd_args = cli
-
         self._load_inputs()
 
     def task(self):
@@ -118,13 +115,11 @@ class BaseProcessor(object):
         However, a processor may have multiple outputs which will result in
 
             'output.json', 'output2.json', etc.
-
-        NOTE: output file(s) are located in the same directory as execution context.
-
         '''
         if isinstance(outputs, dict): outputs = [outputs]
 
         for i, output in enumerate(outputs):
             suffix  = '-{index:05d}'.format(index=i) if i > 0 else ''
-            outfile = '{}{}.json'.format(key, suffix)
-            json.dump(output, open(outfile,'w'))
+            filename = '{}{}.json'.format(key, suffix)
+            output_file = os.path.join(self.settings.output_dir, filename)
+            json.dump(output, open(output_file,'w'))

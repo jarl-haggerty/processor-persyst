@@ -22,10 +22,10 @@ class EdfReader:
     """
     Simple interface for EDF, EDF+C, and EDF+D files.
     """
-    
+
     def __init__ (self, filename):
         self.open(filename)
-    
+
     def __enter__(self):
         return self
 

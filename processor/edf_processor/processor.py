@@ -8,6 +8,7 @@ class EdfProcessor(BaseTimeSeriesProcessor):
 
     def task(self):
         file_path = self.inputs['file']
+
         try:
             with EdfReader(file_path) as edf_file:
                 n_samples = edf_file.get_n_samples()
