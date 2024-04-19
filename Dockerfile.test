@@ -1,0 +1,16 @@
+FROM python:3.9.12
+
+WORKDIR /
+
+RUN apt clean && apt-get update
+
+COPY processor/requirements.txt /processor/requirements.txt
+COPY tests/requirements.txt /test/requirements.txt
+
+RUN pip install -r /processor/requirements.txt
+RUN pip install -r /test/requirements.txt
+
+COPY processor/ /processor
+COPY tests/ /tests
+
+CMD ["pytest", "-s", "/tests" ]

@@ -1,0 +1,9 @@
+version: '3.9'
+
+services:
+  test_edf_processor:
+    build:
+      context: .
+      dockerfile: Dockerfile.test
+    volumes:
+      - ./sample_data:/data/input:ro
