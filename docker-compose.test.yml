@@ -1,13 +1,9 @@
 version: '3.9'
 
-# Mount the /processor folder to overwrite the folder that is included in the build.
-# This allows testing without rebuilding the container.
-
 services:
   test_edf_processor:
     build:
       context: .
       dockerfile: Dockerfile.test
     volumes:
-      - ./processor/:/processor/
-      - ./tests/:/tests/
+      - ./sample_data:/data/input:ro

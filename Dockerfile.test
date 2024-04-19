@@ -10,9 +10,7 @@ COPY tests/requirements.txt /test/requirements.txt
 RUN pip install -r /processor/requirements.txt
 RUN pip install -r /test/requirements.txt
 
-# source code mounted via volume by docker-compose.test.yml
-#   for quicker development iteration
-# COPY processor/ /processor
-# COPY test/ /test
+COPY processor/ /processor
+COPY tests/ /tests
 
 CMD ["pytest", "-s", "/tests" ]

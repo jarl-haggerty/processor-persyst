@@ -12,7 +12,7 @@ params_global = [
         result    = 'pass', 
         rate      = 200,
         inputs    = {
-            'file': '/tests/resources/test.edf'
+            'file': '/data/input/test.edf'
         }),
     # EDF+D
     TimeSeriesTest(
@@ -22,7 +22,7 @@ params_global = [
         result    = 'pass', 
         rate      = 200,
         inputs    = {
-            'file': '/tests/resources/103-002_EEG_01_17_2019.edf'
+            'file': '/data/input/103-002_EEG_01_17_2019.edf'
         }),
     TimeSeriesTest(
         name      = 'template',
@@ -32,6 +32,6 @@ params_global = [
         result    = 'pass', 
         rate      = 800,
         inputs    = {
-            'file': '/tests/resources/sin_wave.edf'
+            'file': '/data/input/sin_wave.edf'
         }),
 ]

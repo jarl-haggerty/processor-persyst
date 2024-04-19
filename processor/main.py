@@ -2,8 +2,5 @@
 
 from edf_processor import EdfProcessor
 
-print("start of processing")
-
-task = EdfProcessor()
-
-print("end of processing")
+task = EdfProcessor(inputs = { 'file': '/data/input/test.edf' })
+task.run()

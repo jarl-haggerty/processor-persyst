@@ -152,9 +152,9 @@ def rate_per_channel_test(task, expected):
             assert pytest.approx(channel.rate, 0.01) == expected.rate
 
 def sin_wave_test(task, expected):
-    #for testing values, we need to create a test file with 2 channels of 15 seconds, 400 amplitude
-    #one channel is "Sin 10Hz" and the other is "Sin 20Hz"
-    #because of the transformation and encoding of the different file format, we allow for a 1% difference in value
+    # for testing values, we need to create a test file with 2 channels of 15 seconds, 400 amplitude
+    # one channel is "Sin 10Hz" and the other is "Sin 20Hz"
+    # because of the transformation and encoding of the different file format, we allow for a 1% difference in value
     for channel in task.channels:
         data = np.fromfile(channel.data_file, dtype=CONTINUOUS_TYPE)
         file_values = data['value'].astype(np.float64)
@@ -171,8 +171,6 @@ def sin_wave_test(task, expected):
 
 
 def channels_test(task, ts_test):
-    print("TEST NAME:", ts_test.name)
-    print("TEST INPUTS:", ts_test.inputs)
     task.run()
     number_channels_test(task.channels, len(ts_test.channels))
     assert str(ts_test.name) == str(ts_test.name)
