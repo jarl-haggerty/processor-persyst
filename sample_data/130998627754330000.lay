@@ -1,0 +1,124 @@
+[NP_Configuration]
+NPConfigStr=250,250,250,250,STR_HIGH,STR_HIGH,STR_HIGH,STR_HIGH,90,90,90,90,4,4,4,4,+,-,0,0,0,0,0,0,0,0,+,-,0,0,0,0,0,0,0,0,+,-,0,0,0,0,0,0,0,0,+,-,STR_NP_4_DEPTH_3_5MM_30CM,STR_NP_4_DEPTH_10MM_30CM
+
+[NP_Patient]
+PatientInitials=SG
+PatientGender=Female
+PatientIdentifier=N/A
+
+[NP_FileInfo]
+LayFileVersion=2
+LayoutFileTimeStampAsLocalTime=Sat, Feb 13, 2016  10:46:15
+LayoutFileTimeStampTimeZone=Pacific Standard Time
+LayoutFileTimeStampOffsetHoursFromGMT=(GMT -8)
+LayoutFileTimeStampOffsetMinutesFromGMT=-480
+LayoutFileTimeStampAsUTC=130998627755100000
+
+ECoGTimeStampAsLocalTime=Sat, Feb 13, 2016  10:42:45
+ECoGTimeStampTimeZone=Pacific Standard Time
+ECoGTimeStampOffsetHoursFromGMT=(GMT -8)
+ECoGTimeStampOffsetMinutesFromGMT=-480
+ECoGTimeStampAsUTC=130998625655000000
+
+ProgrammerSerialNumber=P2398
+ProgrammerSoftwareRevision=1.6
+AnnotatedProgrammerSerialNumber=
+AnnotatedProgrammerSoftwareRevision=
+
+DeviceSerialNumber=191036
+DeviceModelNumber=RNS-300M (7.0)
+DeviceSoftwareVersion=7.0
+DeviceHardwareVersion=1
+DeviceROMVersion=2.3
+DeviceHollyDogTag=4
+DeviceListerDogTag=3
+ProgrammingParameterFile=D:\Archive\VDhServer2\191036\130998599585480000\S130998627633210000.XML
+DATFile=D:\Archive\VDhServer2\191036\130998599585480000\130998627754330000.dat
+NPFileType=LayFile Device-Stored
+DeviceRecordsUsed=2
+
+[NP_Comments]
+Annotations=DEVICE,PROG_MARKER_MAGNET_APPLIED,CHANNEL_0_0,20.132,0,0
+Annotations=DEVICE,PROG_MARKER_MAGNET_REMOVED,CHANNEL_0_0,20.892,0,0
+FeatureLabels=
+
+TriggerReason=ECOG_MAGNET_CATEGORY
+
+[NP_Parameters]
+AmplifierChannel1SampleRate=250Hz
+AmplifierChannel2SampleRate=250Hz
+AmplifierChannel3SampleRate=250Hz
+AmplifierChannel4SampleRate=250Hz
+AmplifierChannel1ECoGStorageEnabled=On
+AmplifierChannel2ECoGStorageEnabled=On
+AmplifierChannel3ECoGStorageEnabled=On
+AmplifierChannel4ECoGStorageEnabled=On
+AmplifierChannel1StoredECoGSamplingInterval=4ms
+AmplifierChannel2StoredECoGSamplingInterval=4ms
+AmplifierChannel3StoredECoGSamplingInterval=4ms
+AmplifierChannel4StoredECoGSamplingInterval=4ms
+AmplifierChannel1Gain=High
+AmplifierChannel2Gain=High
+AmplifierChannel3Gain=High
+AmplifierChannel4Gain=High
+AmplifierChannel1LowPassFilterFrequency=90Hz
+AmplifierChannel2LowPassFilterFrequency=90Hz
+AmplifierChannel3LowPassFilterFrequency=90Hz
+AmplifierChannel4LowPassFilterFrequency=90Hz
+AmplifierChannel1HighPassFilterFrequency=4Hz
+AmplifierChannel2HighPassFilterFrequency=4Hz
+AmplifierChannel3HighPassFilterFrequency=4Hz
+AmplifierChannel4HighPassFilterFrequency=4Hz
+Amplifier1LineLengthTrendWindowSize=4096ms
+Amplifier2LineLengthTrendWindowSize=4096ms
+Amplifier1LineLengthTrendISInterval=4096ms
+Amplifier2LineLengthTrendISInterval=4096ms
+Amplifier1LineLengthTrendSampleCount=32
+Amplifier2LineLengthTrendSampleCount=32
+Amplifier1AreaTrendWindowSize=4096ms
+Amplifier2AreaTrendWindowSize=4096ms
+Amplifier1AreaTrendInterSampleInterval=4096ms
+Amplifier2AreaTrendInterSampleInterval=4096ms
+Amplifier1AreaTrendSampleCount=32
+Amplifier2AreaTrendSampleCount=32
+FirstAmplifierChannel=1    Lhip1 - Lhip2
+SecondAmplifierChannel=3    LEC1 - LEC2
+NPPreTriggerBufferLength=20.156secs
+NPPostTriggerBufferLength=10.192secs
+
+PinLabelInput1=Lhip1
+PinLabelInput2=Lhip2
+PinLabelInput3=Lhip3
+PinLabelInput4=Lhip4
+PinLabelInput5=LEC1
+PinLabelInput6=LEC2
+PinLabelInput7=LEC3
+PinLabelInput8=LEC4
+
+DetectionSetName=Line Length 75% on Ch 1 & 3
+ResponsiveTherapyEnable=Disabled
+
+[NP_TrendData]
+CHANNEL_1_LL=282,332,329,341,310,360,369,389,379,352,352,375,383,369,372,364,384,378,405,374,396,401,429,465,476,442,431,406,392,395,398,401
+CHANNEL_1_LL_SAMPLE_COUNT=32
+CHANNEL_2_LL=618,484,406,401,397,405,393,395,387,390,398,377,370,361,376,340,368,370,377,371,363,363,398,392,388,399,430,416,385,410,402,394
+CHANNEL_2_LL_SAMPLE_COUNT=32
+CHANNEL_1_AREA=0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+CHANNEL_1_AREA_SAMPLE_COUNT=0
+CHANNEL_2_AREA=0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+CHANNEL_2_AREA_SAMPLE_COUNT=0
+
+[FileInfo]
+File=D:\Archive\VDhServer2\191036\130998599585480000\130998627754330000.dat
+FileType=Interleaved
+SamplingRate=250
+HeaderLength=0
+Calibration=0.3
+WaveformCount=4
+DataType=0
+
+[ChannelMap]
+Lhip1 - Lhip2=1
+Lhip3 - Lhip4=2
+LEC1 - LEC2=3
+LEC3 - LEC4=4

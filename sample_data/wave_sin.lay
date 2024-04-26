@@ -1,0 +1,11 @@
+[FileInfo]
+File=wave_sin.dat
+FileType=Interleaved
+SamplingRate=800
+HeaderLength=0
+Calibration=1
+WaveformCount=4
+DataType=0
+[ChannelMap]
+Sin 20Hz=1
+Sin 10Hz=2

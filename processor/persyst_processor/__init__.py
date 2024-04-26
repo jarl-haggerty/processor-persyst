@@ -1,0 +1,1 @@
+from persyst_processor.processor import PersystProcessor
