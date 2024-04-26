@@ -1,13 +1,14 @@
-# EDF Processor
+# Persyst Processor
 
 ### Local Development
-To run the processor on a specific EDF file copy the file into a local
+To run the processor on a specific Persyst file copy the file into a local
 `data/input` directory and run the processor using `make`. For example:
 
 ```bash
 mkdir -p ./data/input # initialize the local data directory and corresponding input sub-directory
-cp sample_data/test.edf ./data/input/ # copy an EDF file into the local data input directory
-make run # run the EDF processor
+cp sample_data/test.lay ./data/input/ # copy an lay file into the local data input directory
+cp sample_data/test.dat ./data/input/ # copy an dat file into the local data input directory
+make run # run the Persyst processor
 ```
 
 Output data files will be written to the local `data/output/` directory.
